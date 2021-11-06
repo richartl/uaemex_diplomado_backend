@@ -15,3 +15,6 @@ You Could check my projects in its url domain, for example, if you want to check
 
 ### Calcular Sueldo
 ![Calcular Sueldo 1](./assets/images/calcular_sueldo/1.png)
+
+### Ecuacion cuadratica
+![Ecuacion Cuadratica 2](./assets/images/ecuacion/ecu.png)
