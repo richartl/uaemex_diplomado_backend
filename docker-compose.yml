@@ -1,0 +1,14 @@
+version: '3'
+services:
+  maven:
+    image: maven:3.3-jdk-8
+    volumes:
+      - "./src:/usr/src/mymaven"
+    working_dir: '/usr/src/mymaven'
+    entrypoint: 'tail -F anything'
+  server:
+    image: tomcat
+    volumes:
+      - "./src/targets:/usr/local/tomcat/webapps"
+    ports:
+      - "8888:8080"
