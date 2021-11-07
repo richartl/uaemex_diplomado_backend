@@ -18,3 +18,6 @@ You Could check my projects in its url domain, for example, if you want to check
 
 ### Ecuacion cuadratica
 ![Ecuacion Cuadratica 2](./assets/images/ecuacion/ecu.png)
+
+### Registrar Productos
+![Registrar Productos 3](./assets/images/productos/1.png)
