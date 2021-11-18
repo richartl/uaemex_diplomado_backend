@@ -10,7 +10,11 @@
 
         <div class="container">
             <jsp:include page="partials/navbar.jsp"></jsp:include>
+            </br>
 
+            <div class="jumbotron">
+              <h1 class="display-4">Agregar repartidor</h1>
+            </div>
             </br>
             <div class="row justify-content-lg-center justify-content-md-center">
                 <div class="col-4">
@@ -21,7 +25,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputID">ID</label>
-                        <input type="text" class="form-control" id="exampleInputId" name="own_id" placeholder="ID de repartidor">
+                        <input type="text" class="form-control" id="exampleInputId" name="own_id" placeholder="SKU de repartidor">
                       </div>
                       <div class="form-group">
                         <label for="delivery_men">Transporte:</label>

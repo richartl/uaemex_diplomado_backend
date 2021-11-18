@@ -85,6 +85,7 @@ public class Transports implements ObjectDao {
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, transport.getVin());
         ps.setString(2, transport.getTransportType());
+        ps.setInt(3, transport.getId());
         ps.executeUpdate();
     }
 }

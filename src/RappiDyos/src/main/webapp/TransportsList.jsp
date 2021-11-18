@@ -10,7 +10,11 @@
 
         <div class="container">
             <jsp:include page="partials/navbar.jsp"></jsp:include>
+            </br>
 
+            <div class="jumbotron">
+              <h1 class="display-4">Transportes</h1>
+            </div>
             </br>
 
             <table class="table">

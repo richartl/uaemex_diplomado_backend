@@ -83,6 +83,7 @@ public class Products implements ObjectDao {
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, newObj.getVin());
         ps.setString(2, newObj.getName());
+        ps.setInt(3, newObj.getId());
         ps.executeUpdate();
     }
 }

@@ -4,7 +4,9 @@
  */
 package com.richartl.rappidyos;
 
+import com.richartl.rappidyos.resources.dao.Deliveries;
 import com.richartl.rappidyos.resources.dao.UserDaoImplementation;
+import com.richartl.rappidyos.resources.model.Delivery;
 import com.richartl.rappidyos.resources.model.User;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,6 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -80,13 +83,15 @@ public class LoginController extends HttpServlet {
         UserDaoImplementation userImpl = new UserDaoImplementation();
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        
+        Deliveries ds = new Deliveries();
         try {
             User loggedUser = userImpl.loginUser(email, password);
             if (loggedUser == null) {
                 request.getRequestDispatcher("/LoginError.jsp").forward(request, response);
             }
+            List<Delivery> dss = (List<Delivery>)(List<?>) ds.getAll();
             request.setAttribute("loggedUser", loggedUser);
+            request.setAttribute("deliveries", dss);
             HttpSession session = request.getSession();
             session.setMaxInactiveInterval(60*2);
             request.getRequestDispatcher("/WelcomePage.jsp").forward(request, response);

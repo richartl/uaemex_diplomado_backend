@@ -91,6 +91,7 @@ public class Deliveries implements ObjectDao{
         PreparedStatement ps = con.prepareStatement(query);
         ps.setInt(1, newObj.getDeliveryMan().getId());
         ps.setInt(2, newObj.getProduct().getId());
+        ps.setInt(3, newObj.getId());
         ps.executeUpdate();
     }
 }

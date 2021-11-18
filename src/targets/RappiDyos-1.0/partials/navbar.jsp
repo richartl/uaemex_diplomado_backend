@@ -5,13 +5,13 @@
                   <form action="${pageContext.request.contextPath}/DeliveriesController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Ver Todos</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryAddController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryDeleteController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryDeleteController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryUpdateController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
                 </div>
@@ -22,13 +22,13 @@
                   <form action="${pageContext.request.contextPath}/DeliveryMenController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Ver Todos</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryManAddController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryManAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryManDeleteController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryManDeleteController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryManUpdateController" method="post">
+                  <form action="${pageContext.request.contextPath}/DeliveryManUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
                 </div>
@@ -39,13 +39,13 @@
                   <form action="${pageContext.request.contextPath}/ProductsController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Ver Todos</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/ProductAddController" method="post">
+                  <form action="${pageContext.request.contextPath}/ProductAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/ProductDeleteController" method="post">
+                  <form action="${pageContext.request.contextPath}/ProductDeleteController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/ProductUpdateController" method="post">
+                  <form action="${pageContext.request.contextPath}/ProductUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
                 </div>
@@ -56,13 +56,13 @@
                   <form action="${pageContext.request.contextPath}/TransportsController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Ver Todos</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/TransportsAddController" method="post">
+                  <form action="${pageContext.request.contextPath}/TransportAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/TransportsDeleteController" method="post">
+                  <form action="${pageContext.request.contextPath}/TransportDeleteController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/TransportsUpdateController" method="post">
+                  <form action="${pageContext.request.contextPath}/TransportUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
                 </div>

@@ -16,8 +16,7 @@ public class DeliveryMan extends GenericObject {
     
     public DeliveryMan() {}
 
-    public DeliveryMan(int id, String name, String ownId, Transport transport) {
-        this.id = id;
+    public DeliveryMan(String name, String ownId, Transport transport) {
         this.name = name;
         this.ownId = ownId;
         this.transport = transport;

@@ -10,15 +10,13 @@ package com.richartl.rappidyos.resources.model;
  */
 public class Delivery extends GenericObject {
     private int id;
-    private String delivery_date;
+    private String deliveryDate;
     private DeliveryMan deliveryMan;
     private Product product;
 
     public Delivery() {}
 
-    public Delivery(int id, String delivery_date, DeliveryMan deliveryMan, Product product) {
-        this.id = id;
-        this.delivery_date = delivery_date;
+    public Delivery(DeliveryMan deliveryMan, Product product) {
         this.deliveryMan = deliveryMan;
         this.product = product;
     }
@@ -27,8 +25,8 @@ public class Delivery extends GenericObject {
         return id;
     }
 
-    public String getDelivery_date() {
-        return delivery_date;
+    public String getDeliveryDate() {
+        return deliveryDate;
     }
 
     public DeliveryMan getDeliveryMan() {
@@ -43,8 +41,8 @@ public class Delivery extends GenericObject {
         this.id = id;
     }
 
-    public void setDelivery_date(String delivery_date) {
-        this.delivery_date = delivery_date;
+    public void setDeliveryDate(String deliveryDate) {
+        this.deliveryDate = deliveryDate;
     }
 
     public void setDeliveryMan(DeliveryMan deliveryMan) {

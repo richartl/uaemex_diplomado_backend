@@ -15,9 +15,9 @@ public class Transport extends GenericObject{
 
     public Transport() {}
     
-    public Transport(int id, String vin) {
-        this.id = id;
+    public Transport(String vin, String transportType) {
         this.vin = vin;
+        this.transportType = transportType;
     }
 
     public int getId() {

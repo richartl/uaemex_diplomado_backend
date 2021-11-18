@@ -15,8 +15,7 @@ public class Product extends GenericObject {
 
     public Product() {}
     
-    public Product(int id, String name, String vin) {
-        this.id = id;
+    public Product(String name, String vin) {
         this.name = name;
         this.vin = vin;
     }

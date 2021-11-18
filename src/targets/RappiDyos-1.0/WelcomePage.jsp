@@ -4,6 +4,7 @@
     Author     : richartl
 --%>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <jsp:include page="partials/head.jsp">
        <jsp:param name="title" value="Error" />
     </jsp:include>
@@ -12,13 +13,14 @@
             <jsp:include page="partials/navbar.jsp"></jsp:include>
 
             </br>
-            </br>
-            </br>
-            <div class="row">
-                <form action="${pageContext.request.contextPath}/" method="get">
-                  <button type="submit" class="btn btn-primary">Regresar</button>
-                </form>
+            
+            <div class="jumbotron">
+              <h1 class="display-4">Bienvenido ${loggedUser.getName()}</h1>
             </div>
+            </br>
+
+            </br>
+
 
     <jsp:include page="partials/scripts.jsp"></jsp:include>
     </body>

@@ -10,6 +10,11 @@
 
         <div class="container">
             <jsp:include page="partials/navbar.jsp"></jsp:include>
+            </br>
+
+            <div class="jumbotron">
+              <h1 class="display-4">Agregar pedido</h1>
+            </div>
 
             </br>
             <div class="row justify-content-lg-center justify-content-md-center">

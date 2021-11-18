@@ -10,8 +10,13 @@
 
         <div class="container">
             <jsp:include page="partials/navbar.jsp"></jsp:include>
-
             </br>
+
+            <div class="jumbotron">
+              <h1 class="display-4">Crear Producto</h1>
+            </div>
+            </br>
+
             <div class="row justify-content-lg-center justify-content-md-center">
                 <div class="col-4">
                     <form action="${pageContext.request.contextPath}/ProductAddController" method="post" id="product_form">

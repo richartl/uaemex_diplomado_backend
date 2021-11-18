@@ -10,7 +10,11 @@
 
         <div class="container">
             <jsp:include page="partials/navbar.jsp"></jsp:include>
+            </br>
 
+            <div class="jumbotron">
+              <h1 class="display-4">Todos los pedidos</h1>
+            </div>
             </br>
 
             <table class="table">
@@ -18,6 +22,8 @@
                 <tr>
                   <th scope="col">Repartidor</th>
                   <th scope="col">Producto</th>
+                  <th scope="col">Transporte</th>
+                  <th scope="col">Placa</th>
                 </tr>
               </thead>
               <tbody>
@@ -25,6 +31,8 @@
                     <tr>
                       <td scope="col">${delivery.getDeliveryMan().getName()}</td>
                       <td scope="col">${delivery.getProduct().getName()}</td>
+                      <td scope="col">${delivery.getDeliveryMan().getTransport().getTransportType()}</td>
+                      <td scope="col">${delivery.getDeliveryMan().getTransport().getVin()}</td>
                     </tr>
                 </c:forEach>
               </tbody>
