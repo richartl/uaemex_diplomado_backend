@@ -12,3 +12,26 @@ services:
       - "./src/targets:/usr/local/tomcat/webapps"
     ports:
       - "8888:8080"
+    environment:
+      - DB_HOST=mysql
+      - DB_PASS=root
+      - DB_USER=root
+      - DB_NAME=jsp_project
+  mysql:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=jsp_project
+      - MYSQL_PASSWORD=root
+    volumes:
+      - db-data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - PMA_HOST=mysql
+    ports:
+      - 8082:80
+
+volumes:
+  db-data:
