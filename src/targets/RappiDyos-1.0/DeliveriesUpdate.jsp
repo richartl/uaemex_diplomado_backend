@@ -71,7 +71,7 @@
             </br>
             </br>
             <div class="row">
-                <form action="${pageContext.request.contextPath}/WelcomePage.jsp" method="get">
+                <form action="${pageContext.request.contextPath}/LoginController" method="get">
                   <button type="submit" class="btn btn-primary">Regresar</button>
                 </form>
             </div>

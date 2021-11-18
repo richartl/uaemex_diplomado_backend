@@ -66,7 +66,24 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession session = request.getSession(false);
+        UserDaoImplementation userImpl = new UserDaoImplementation();
+        if(session.getAttribute("loggedUserId") == null) {
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
+        }
+        else {
+            try {
+                Deliveries ds = new Deliveries();
+                List<Delivery> dss = (List<Delivery>)(List<?>) ds.getAll();
+                int userId = (int) session.getAttribute("loggedUserId");
+                User loggedUser = userImpl.getUser(userId);
+                request.setAttribute("deliveries", dss);
+                request.setAttribute("loggedUser", loggedUser);
+                request.getRequestDispatcher("/WelcomePage.jsp").forward(request, response);
+            } catch (SQLException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     /**
@@ -93,6 +110,7 @@ public class LoginController extends HttpServlet {
             request.setAttribute("loggedUser", loggedUser);
             request.setAttribute("deliveries", dss);
             HttpSession session = request.getSession();
+            session.setAttribute("loggedUserId", loggedUser.getId());
             session.setMaxInactiveInterval(60*2);
             request.getRequestDispatcher("/WelcomePage.jsp").forward(request, response);
         } catch (SQLException ex) {

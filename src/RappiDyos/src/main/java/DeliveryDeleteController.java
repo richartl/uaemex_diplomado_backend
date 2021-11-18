@@ -3,6 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import com.richartl.rappidyos.DeliveryAddController;
+import com.richartl.rappidyos.ProductsController;
+import com.richartl.rappidyos.resources.dao.Deliveries;
+import com.richartl.rappidyos.resources.dao.DeliveryMen;
+import com.richartl.rappidyos.resources.dao.Products;
+import com.richartl.rappidyos.resources.model.Delivery;
+import com.richartl.rappidyos.resources.model.DeliveryMan;
+import com.richartl.rappidyos.resources.model.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -10,6 +18,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -56,7 +68,20 @@ public class DeliveryDeleteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        DeliveryMen ts = new DeliveryMen();
+        Products ps = new Products();
+        Deliveries dls = new Deliveries();
+        try {
+            List<DeliveryMan> tss = (List<DeliveryMan>)(List<?>) ts.getAll();
+            List<Product> pss = (List<Product>)(List<?>) ps.getAll();
+            List<Delivery> dlss = (List<Delivery>)(List<?>) dls.getAll();
+            request.setAttribute("delivery_men", tss);
+            request.setAttribute("products", pss);
+            request.setAttribute("deliveries", dlss);
+            request.getRequestDispatcher("/DeliveriesDelete.jsp").forward(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(DeliveryDeleteController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -70,7 +95,14 @@ public class DeliveryDeleteController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            Deliveries dls = new Deliveries();
+            Delivery oldDl = (Delivery) dls.getById(Integer.parseInt(request.getParameter("delivery_id")));
+            dls.delete(oldDl.getId());
+            request.getRequestDispatcher("/CreateSuccess.jsp").forward(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(DeliveryDeleteController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

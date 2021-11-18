@@ -16,7 +16,7 @@
             </div>
 
             <div class="row">
-                <form action="${pageContext.request.contextPath}/" method="get">
+                <form action="${pageContext.request.contextPath}/LoginController" method="get">
                   <button type="submit" class="btn btn-primary">Regresar</button>
                 </form>
             </div>

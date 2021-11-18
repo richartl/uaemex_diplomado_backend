@@ -25,9 +25,6 @@
                   <form action="${pageContext.request.contextPath}/DeliveryManAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/DeliveryManDeleteController" method="get">
-                    <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
-                  </form>
                   <form action="${pageContext.request.contextPath}/DeliveryManUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
@@ -42,9 +39,6 @@
                   <form action="${pageContext.request.contextPath}/ProductAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
                   </form>
-                  <form action="${pageContext.request.contextPath}/ProductDeleteController" method="get">
-                    <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
-                  </form>
                   <form action="${pageContext.request.contextPath}/ProductUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>
                   </form>
@@ -58,9 +52,6 @@
                   </form>
                   <form action="${pageContext.request.contextPath}/TransportAddController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Agregar</button></a>
-                  </form>
-                  <form action="${pageContext.request.contextPath}/TransportDeleteController" method="get">
-                    <a class="dropdown-item" href="#"><button type="submit">Eliminar</button></a>
                   </form>
                   <form action="${pageContext.request.contextPath}/TransportUpdateController" method="get">
                     <a class="dropdown-item" href="#"><button type="submit">Actualizar</button></a>

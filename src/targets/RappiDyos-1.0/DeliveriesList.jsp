@@ -5,7 +5,7 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <jsp:include page="partials/head.jsp">
-       <jsp:param name="title" value="Error" />
+       <jsp:param name="title" value="Pedidos" />
     </jsp:include>
 
         <div class="container">
@@ -40,7 +40,7 @@
             </br>
             </br>
             <div class="row">
-                <form action="${pageContext.request.contextPath}/WelcomePage.jsp" method="get">
+                <form action="${pageContext.request.contextPath}/LoginController" method="get">
                   <button type="submit" class="btn btn-primary">Regresar</button>
                 </form>
             </div>

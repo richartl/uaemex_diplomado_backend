@@ -11,9 +11,9 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="${pageContext.request.contextPath}/">
-                    RappiDyos Admin
-                </a>
+                <form action="${pageContext.request.contextPath}/LoginController" method="get">
+                  <button type="submit" class="btn btn-primary navbar-brand">RappiDyos Admin</button>
+                </form>
             </div>
         </div>
     </nav>
